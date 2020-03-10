@@ -5,7 +5,9 @@
 config/*
 logs/*
 memory_repo/*
+mods/*
 saves/*
+scripts/*
 resources/*
 texturepacks/*
 ## configs
