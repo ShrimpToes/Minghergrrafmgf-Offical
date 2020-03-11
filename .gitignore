@@ -2,7 +2,6 @@
 ## we should all add extra stuff in our mods folder here so they dont end up on github
 # ikes machine
 ## folders
-config/*
 logs/*
 memory_repo/*
 saves/*
