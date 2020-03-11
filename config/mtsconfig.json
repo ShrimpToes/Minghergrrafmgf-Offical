@@ -1,0 +1,586 @@
+{
+  "general": {
+    "opSignEditingOnly": {
+      "value": false,
+      "defaultValue": false,
+      "comment": "If true, only OPs will be able to edit signs on servers.  Does not affect client worlds."
+    },
+    "opPickupVehiclesOnly": {
+      "value": false,
+      "defaultValue": false,
+      "comment": "If true, only OPs will be able to pick up vehicles with wrenches.  Does not affect client worlds."
+    },
+    "speedFactor": {
+      "value": 0.35,
+      "defaultValue": 0.35,
+      "comment": "Factor to apply to vehicle movement.  1 is the realistic value, but this makes vehicles move too fast for Minecraft. Adjust with caution."
+    },
+    "fuelUsageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor times which engines use fuel.  Change this if you think engines use fuel too fast or slow."
+    },
+    "engineHoursFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor times which engines hours accumulate.  Change this if you want to adjust how fast engines wear out."
+    },
+    "clingSpeed": {
+      "value": 0.25,
+      "defaultValue": 0.25,
+      "comment": "Speed (in BLK/S) at which players start to slide off vehicles due to wind.  Does not affect collision boxes set as interior in the vehicle JSON."
+    },
+    "itemWeights": {
+      "comment1": "The following section is used for calculating item weights.  Any item that contains the text bits will have its weight multiplied by the following factor.",
+      "comment2": "This mass factors into vehicle performance, with particular emphasis on vehicle payloads.  Some defaults are presented here, but you can add/remove to your liking.",
+      "comment3": "Note that the part of the name searched is the item\u0027s registry name, NOT the in-game display name.  This is similar to what is in the /give command.",
+      "weights": {
+        "gold": 4.0,
+        "diamond": 4.0,
+        "ore": 2.5,
+        "iron": 4.0,
+        "coal": 2.0,
+        "stone": 1.5
+      }
+    }
+  },
+  "damage": {
+    "explosions": {
+      "value": true,
+      "defaultValue": true,
+      "comment": "Whether or not vehicles explode when crashed or shot down."
+    },
+    "blockBreakage": {
+      "value": true,
+      "defaultValue": true,
+      "comment": "Whether or not vehicles can break blocks when they hit them.  If false, vehicles will simply stop when they hit blocks."
+    },
+    "propellerDamageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor for damage caused by a propeller."
+    },
+    "jetDamageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor for damage caused by a jet engine."
+    },
+    "wheelDamageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor for damage caused by wheels on vehicles."
+    },
+    "crashDamageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor for damage caused by crashes."
+    },
+    "bulletDamageFactor": {
+      "value": 1.0,
+      "defaultValue": 1.0,
+      "comment": "Factor for damage caused by bullets on vehicles."
+    },
+    "engineLeakProbability": {
+      "value": 0.01,
+      "defaultValue": 0.01,
+      "comment": "Chance an engine will spring a leak if hit.  Explosions cause 10x this chance."
+    },
+    "crashItemDropPercentage": {
+      "value": 0.75,
+      "defaultValue": 0.75,
+      "comment": "Percent that a crafting ingredient will be dropped when a vehicle is crashed.  Note that fire/explosions may destroy these items if enabled, so just because they drop does not mean you will get all of them."
+    }
+  },
+  "fuel": {
+    "comment1": "The following section is used for fuel configs for engines.  Each entry here is a single fuel type for engines.",
+    "comment2": "Inside each entry exist values for the potency of the fluids that can be considered to be that fuel type.",
+    "comment3": "You can make engines take different types of fluids for their fuels by editing these values.  See the in-game handbook for more information.",
+    "fuels": {
+      "diesel": {
+        "diesel": 1.0,
+        "lava": 1.0,
+        "oil": 0.5,
+        "biodiesel": 0.8
+      },
+      "avgas": {
+        "lava": 1.0,
+        "gasoline": 1.0
+      },
+      "gasoline": {
+        "lava": 1.0,
+        "gasoline": 1.0,
+        "ethanol": 0.85
+      }
+    }
+  },
+  "crafting": {
+    "comment1": "The following section is used for overriding crafting recipes from packs for use in modpacks and servers.",
+    "comment2": "Everything that is crafted on one of the benches can be modified here to include any item, including modded ones.",
+    "comment3": "The format is one of [modID]:[ItemName]:[Metadata]:[Qty], with the name being the same as the in-game /give command.",
+    "comment4": "A sample override config is given here for reference.  Modify as you see fit.",
+    "overrides": {
+      "mtsofficialpack": {
+        "wheellarge": [
+          "minecraft:dye:0:3",
+          "minecraft:iron_ingot:0:3",
+          "minecraft:wool:15:3"
+        ],
+        "engineamci4": [
+          "minecraft:piston:0:4",
+          "minecraft:obsidian:0:3",
+          "minecraft:iron_ingot:0:1"
+        ]
+      },
+      "unuparts": {
+        "unuparts_decor_unu_cutout_derrick": [
+          "minecraft:heavy_weighted_pressure_plate:0:1",
+          "minecraft:dye:6:2"
+        ]
+      }
+    }
+  },
+  "client": {
+    "devMode": {
+      "value": false,
+      "defaultValue": false,
+      "comment": "If enabled, MTS will re-load all resources every time the config key (P) is pressed.  This includes textures for vehicles and parts, JSON files, and OBJ models.  This is intended for use in pack creation with pack components being placed in an un-zipped resource pack.  Note that every re-load will also re-load EVERY resource, not just MTS resources.  Make sure not to have lots of mods installed when you are doing this!"
+    },
+    "seaLevelOffset": {
+      "value": false,
+      "defaultValue": false,
+      "comment": "Does altimiter read zero at average sea level instead of Y\u003d0?"
+    },
+    "mouseYoke": {
+      "value": false,
+      "defaultValue": false,
+      "comment": "Enable mouse yoke for vehicles? Prevents looking around unless unlocked.  Think MCHeli controls."
+    },
+    "keyboardOverride": {
+      "value": true,
+      "defaultValue": true,
+      "comment": "Should keyboard controls be ignored when a joystick control is mapped?  Leave true to free up the keyboard while using a joysick."
+    },
+    "renderReductionHeight": {
+      "value": 250,
+      "defaultValue": 250,
+      "comment": "When riding in a vehicle above this height MTS will reduce the render distance to 1.  This provides a significant speedup for worldgen and render lag.  Note that this is only active on Singleplayer."
+    },
+    "controlSurfaceCooldown": {
+      "value": 4,
+      "defaultValue": 4,
+      "comment": "How long (in ticks) it takes before control surfaces try to return to their natural angle.  This is not used when using a joystick."
+    },
+    "steeringIncrement": {
+      "value": 20,
+      "defaultValue": 20,
+      "comment": "How many units (1/10 of a degree) to turn the wheels on vehicles for every tick the button is held down.  This is not used when using a joystick."
+    },
+    "joystickDeadZone": {
+      "value": 0.03,
+      "defaultValue": 0.03,
+      "comment": "Dead zone for joystick axis.  This is NOT joystick specific."
+    }
+  },
+  "controls": {
+    "keyboard": {
+      "car.mod": {
+        "keyCode": 54
+      },
+      "aircraft.brake": {
+        "keyCode": 48
+      },
+      "aircraft.throttle_u": {
+        "keyCode": 23
+      },
+      "car.panel": {
+        "keyCode": 22
+      },
+      "car.gun": {
+        "keyCode": 57
+      },
+      "car.shift_u": {
+        "keyCode": 19
+      },
+      "car.horn": {
+        "keyCode": 46
+      },
+      "aircraft.radio": {
+        "keyCode": 12
+      },
+      "aircraft.camlock": {
+        "keyCode": 157
+      },
+      "aircraft.yaw_l": {
+        "keyCode": 36
+      },
+      "car.gas": {
+        "keyCode": 17
+      },
+      "aircraft.throttle_d": {
+        "keyCode": 37
+      },
+      "car.turn_l": {
+        "keyCode": 30
+      },
+      "aircraft.roll_l": {
+        "keyCode": 30
+      },
+      "car.camlock": {
+        "keyCode": 157
+      },
+      "car.turn_r": {
+        "keyCode": 32
+      },
+      "aircraft.yaw_r": {
+        "keyCode": 38
+      },
+      "aircraft.roll_r": {
+        "keyCode": 32
+      },
+      "car.shift_d": {
+        "keyCode": 33
+      },
+      "car.radio": {
+        "keyCode": 12
+      },
+      "aircraft.pitch_d": {
+        "keyCode": 17
+      },
+      "car.zoom_o": {
+        "keyCode": 209
+      },
+      "aircraft.zoom_o": {
+        "keyCode": 209
+      },
+      "aircraft.zoom_i": {
+        "keyCode": 201
+      },
+      "aircraft.flaps_d": {
+        "keyCode": 35
+      },
+      "car.zoom_i": {
+        "keyCode": 201
+      },
+      "aircraft.pitch_u": {
+        "keyCode": 31
+      },
+      "aircraft.mod": {
+        "keyCode": 54
+      },
+      "aircraft.flaps_u": {
+        "keyCode": 21
+      },
+      "car.brake": {
+        "keyCode": 31
+      },
+      "aircraft.gun": {
+        "keyCode": 57
+      },
+      "aircraft.panel": {
+        "keyCode": 22
+      }
+    },
+    "joystick": {
+      "aircraft.look_a": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_yaw_l": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.mod": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.look_d": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.look_d": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.brake_analog": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_yaw_r": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.look_a": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.camlock": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.roll": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.radio": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_roll_l": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.zoom_o": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.zoom_o": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.zoom_i": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.zoom_i": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.pitch": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.look_r": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.look_l": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.park": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.look_u": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.changeview": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.look_r": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.gun": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.look_u": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.look_l": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_roll_r": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.turn": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_pitch_d": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.yaw": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.brake": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.reverse": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.panel": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.gun": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.shift_u": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.horn": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.radio": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.trim_pitch_u": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.camlock": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.park": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.changeview": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.gas": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.shift_d": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.flaps_d": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.throttle": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.brake_analog": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.mod": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.flaps_u": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "car.brake": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      },
+      "aircraft.panel": {
+        "buttonIndex": 0,
+        "invertedAxis": false,
+        "axisMinTravel": 0.0,
+        "axisMaxTravel": 0.0
+      }
+    }
+  }
+}
