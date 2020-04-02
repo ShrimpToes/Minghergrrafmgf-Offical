@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/cross",
+    "textures": {
+        "cross": "blocks/sapling_jungle"
+    }
+}

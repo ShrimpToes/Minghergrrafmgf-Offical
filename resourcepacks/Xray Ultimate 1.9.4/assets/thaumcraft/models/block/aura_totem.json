@@ -1,0 +1,68 @@
+{
+    "__createdwith": "opl's Model Creator",
+    "ambientocclusion": false,
+    "textures": {
+        "particle": "thaumcraft:blocks/aura_totem_push",
+        "side": "thaumcraft:blocks/aura_totem_push",
+        "top": "thaumcraft:blocks/aura_totem_top",
+        "overlay": "thaumcraft:blocks/animatedglow"
+    },
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,16,16],
+            "faces": {
+                "up": {
+                    "texture": "#top",
+                    "cullface": up
+                },
+                "down": {
+                    "texture": "#top",
+                    "cullface": down
+                },
+                "west": {
+                    "texture": "#side",
+                    "cullface": west
+                },
+                "east": {
+                    "texture": "#side",
+                    "cullface": east
+                },
+                "north": {
+                    "texture": "#side",
+                    "cullface": north
+                },
+                "south": {
+                    "texture": "#side",
+                    "cullface": south
+                }
+            }
+        },
+        {
+            "from": [0.1,0,0.1],
+            "to": [15.9,16,15.9],
+            "faces": {
+                "west": {
+                    "texture": "#overlay",
+                    "cullface": west,
+                    "tintindex": 0
+                },
+                "east": {
+                    "texture": "#overlay",
+                    "cullface": east,
+                    "tintindex": 0
+                },
+                "north": {
+                    "texture": "#overlay",
+                    "cullface": north,
+                    "tintindex": 0
+                },
+                "south": {
+                    "texture": "#overlay",
+                    "cullface": south,
+                    "tintindex": 0
+                }
+            }
+        }
+    ]
+}

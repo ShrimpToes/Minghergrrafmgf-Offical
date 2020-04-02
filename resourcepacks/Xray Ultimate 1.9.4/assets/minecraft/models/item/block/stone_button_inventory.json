@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/button_inventory",
+    "textures": {
+        "texture": "blocks/stone"
+    }
+}

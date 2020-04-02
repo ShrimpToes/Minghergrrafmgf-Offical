@@ -1,0 +1,6 @@
+{
+    "parent": "block/ores",
+    "textures": {
+        "all": "thaumcraft:blocks/advanced_alchemical_metal"
+    }
+}

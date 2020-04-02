@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/wall_nse",
+    "textures": {
+        "wall": "blocks/cobblestone"
+    }
+}

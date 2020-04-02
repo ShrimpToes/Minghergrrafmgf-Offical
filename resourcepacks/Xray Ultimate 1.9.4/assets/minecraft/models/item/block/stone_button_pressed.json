@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/button_pressed",
+    "textures": {
+        "texture": "blocks/stone"
+    }
+}

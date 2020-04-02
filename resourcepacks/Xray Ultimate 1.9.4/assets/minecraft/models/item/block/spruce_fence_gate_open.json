@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/fence_gate_open",
+    "textures": {
+        "texture": "blocks/planks_spruce"
+    }
+}

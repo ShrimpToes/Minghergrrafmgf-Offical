@@ -1,0 +1,23 @@
+{
+    "parent": "builtin/generated",
+	"textures": {
+        "layer0": "thaumcraft:blocks/base_wood"
+    },
+    "display": {
+        "thirdperson": {
+            "rotation": [ -100, 0, 0 ],
+            "translation": [ 0, 1, -2.5],
+            "scale": [ 0.75, 0.75, 0.75 ]
+        },
+        "firstperson": {
+            "rotation": [ -10, 0, -20 ],
+            "translation": [ 4, 0, 0 ],
+            "scale": [ 1.8, 2, 1.8 ]
+        },
+        "gui": {
+            "rotation": [ 0, 0, -45 ],
+            "translation": [ -0.33, -0.33, -0.33 ],
+            "scale": [ 0.75, 0.75, 0.75 ]
+        }
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/pane_noside_alt",
+    "textures": {
+        "pane": "blocks/glass_red"
+    }
+}

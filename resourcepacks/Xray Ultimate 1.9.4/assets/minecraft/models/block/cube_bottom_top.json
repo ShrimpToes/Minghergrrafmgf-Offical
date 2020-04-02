@@ -1,0 +1,13 @@
+{
+"__comment": "Copyright 2015 Filmjolk David Grindholmen",
+    "parent": "block/ore",
+    "textures": {
+        "particle": "#side",
+        "down": "#bottom",
+        "up": "#top",
+        "north": "#side",
+        "east": "#side",
+        "south": "#side",
+        "west": "#side"
+    }
+}

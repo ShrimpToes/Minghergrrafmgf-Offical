@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/tinted_cross",
+    "textures": {
+        "cross": "blocks/tallgrass"
+    }
+}

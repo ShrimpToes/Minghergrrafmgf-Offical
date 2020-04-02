@@ -1,0 +1,6 @@
+{
+	"parent": "block/ores",
+	"textures": {
+		"all": "ic2:blocks/crop/cocoa_4"
+	}
+}

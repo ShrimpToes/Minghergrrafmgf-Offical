@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/pane_noside",
+    "textures": {
+        "pane": "blocks/glass"
+    }
+}

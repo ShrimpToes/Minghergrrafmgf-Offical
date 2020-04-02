@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/button",
+    "textures": {
+        "texture": "blocks/planks_oak"
+    }
+}

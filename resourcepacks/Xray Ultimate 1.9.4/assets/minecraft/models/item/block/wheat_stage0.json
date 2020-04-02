@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/crop",
+    "textures": {
+        "crop": "blocks/wheat_stage_0"
+    }
+}

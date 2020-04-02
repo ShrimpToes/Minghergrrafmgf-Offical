@@ -1,0 +1,6 @@
+{
+    "parent": "item/block/flower_pot_cross",
+    "textures": {
+        "plant": "blocks/deadbush"
+    }
+}

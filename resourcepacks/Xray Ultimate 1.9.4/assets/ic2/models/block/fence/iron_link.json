@@ -1,0 +1,6 @@
+{
+	"parent": "ic2:block/shape/fence_link",
+	"textures": {
+		"texture": "ic2:blocks/fence_iron"
+	}
+}

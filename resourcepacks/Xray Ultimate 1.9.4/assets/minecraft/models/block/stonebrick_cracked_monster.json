@@ -1,0 +1,44 @@
+{
+"textures": {
+    "particle": "blocks/redstone_block",
+    "stonebrick": "blocks/stonebrick_cracked"
+},
+"elements": [ 
+{
+    "from": [ 0, 0, 0 ],
+    "to": [ 16, 16, 16 ],
+    "faces": {
+        "down":  { "uv": [ 16, 16, 0, 0 ], "texture": "#stonebrick" },
+        "up":    { "uv": [ 0, 0, 16, 16 ], "texture": "#stonebrick" },
+        "north": { "uv": [ 0, 0, 16, 16 ], "texture": "#stonebrick" },
+        "south": { "uv": [ 0, 0, 16, 16 ], "texture": "#stonebrick" },
+        "west":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stonebrick" },
+        "east":  { "uv": [ 0, 0, 16, 16 ], "texture": "#stonebrick" }
+    }
+},
+{
+    "from": [ 5, -0.01, 5 ],
+    "to": [ 11, 16.01, 11 ],
+    "faces": {
+        "down":  { "uv": [ 11, 11, 5, 5 ], "texture": "#particle" },
+        "up":    { "uv": [ 5, 5, 11, 11 ], "texture": "#particle" }
+    }
+},
+{
+    "from": [ -0.01, 5, 5 ],
+    "to": [ 16.01, 11, 11 ],
+    "faces": {
+        "west":  { "uv": [ 5, 5, 11, 11 ], "texture": "#particle" },
+        "east":  { "uv": [ 5, 5, 11, 11 ], "texture": "#particle" }
+    }
+},
+{
+    "from": [ 5, 5, -0.01 ],
+    "to": [ 11, 11, 16.01 ],
+    "faces": {
+        "north": { "uv": [ 5, 5, 11, 11 ], "texture": "#particle" },
+        "south": { "uv": [ 5, 5, 11, 11 ], "texture": "#particle" }
+    }
+}
+]
+}

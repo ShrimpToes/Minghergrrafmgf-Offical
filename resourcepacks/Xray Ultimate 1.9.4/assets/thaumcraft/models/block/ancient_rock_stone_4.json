@@ -1,0 +1,4 @@
+{
+    "parent": "block/ores",
+    "textures": { "all": "thaumcraft:blocks/ancient_rock_stone_4" }
+}

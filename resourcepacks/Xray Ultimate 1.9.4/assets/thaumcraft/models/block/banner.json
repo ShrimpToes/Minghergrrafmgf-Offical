@@ -1,0 +1,6 @@
+{
+    "parent": "block/ores",
+    "textures": {
+        "all": "thaumcraft:blocks/base_wood_grain"
+    }
+}
