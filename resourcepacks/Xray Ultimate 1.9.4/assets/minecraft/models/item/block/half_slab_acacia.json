@@ -1,8 +1,0 @@
-{
-    "parent": "item/block/half_slab",
-    "textures": {
-        "bottom": "blocks/planks_acacia",
-        "top": "blocks/planks_acacia",
-        "side": "blocks/planks_acacia"
-    }
-}

@@ -1,6 +1,0 @@
-{
-    "parent": "item/block/wall_ns",
-    "textures": {
-        "wall": "blocks/cobblestone"
-    }
-}

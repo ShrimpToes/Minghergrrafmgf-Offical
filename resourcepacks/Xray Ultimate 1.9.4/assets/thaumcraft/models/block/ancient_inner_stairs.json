@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "thaumcraft:blocks/ancient_tile",
-        "top": "thaumcraft:blocks/ancient_tile",
-        "side": "thaumcraft:blocks/ancient_tile"
-    }
-}

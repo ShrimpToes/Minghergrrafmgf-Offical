@@ -1,8 +1,0 @@
-{
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "thaumcraft:blocks/eldritch_stone_1",
-        "top": "thaumcraft:blocks/eldritch_stone_2",
-        "side": "thaumcraft:blocks/eldritch_stone_3"
-    }
-}

@@ -1,6 +1,0 @@
-{
-	"parent": "automation:block/CUBE",
-	"textures": {
-		"tex": "automation:blocks/unbr/stone14"
-	}
-}

@@ -1,8 +1,0 @@
-{
-    "parent": "block/half_slab",
-    "textures": {
-        "bottom": "thaumcraft:blocks/greatwood_plank",
-        "top": "thaumcraft:blocks/greatwood_plank",
-        "side": "thaumcraft:blocks/greatwood_plank"
-    }
-}

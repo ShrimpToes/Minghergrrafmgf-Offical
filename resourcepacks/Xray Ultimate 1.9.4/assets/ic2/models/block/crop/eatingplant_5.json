@@ -1,6 +1,0 @@
-{
-	"parent": "block/ores",
-	"textures": {
-		"all": "ic2:blocks/crop/eatingplant_5"
-	}
-}

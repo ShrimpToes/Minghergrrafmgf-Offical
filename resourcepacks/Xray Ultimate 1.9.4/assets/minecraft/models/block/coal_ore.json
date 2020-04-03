@@ -1,7 +1,0 @@
-{
-"__comment": "Copyright 2015 Filmjolk David Grindholmen",
-    "parent": "block/ores",
-    "textures": {
-        "all": "blocks/coal_ore"
-    }
-}

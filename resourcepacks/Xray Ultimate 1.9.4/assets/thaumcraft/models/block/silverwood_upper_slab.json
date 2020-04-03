@@ -1,8 +1,0 @@
-{
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "thaumcraft:blocks/silverwood_plank",
-        "top": "thaumcraft:blocks/silverwood_plank",
-        "side": "thaumcraft:blocks/silverwood_plank"
-    }
-}

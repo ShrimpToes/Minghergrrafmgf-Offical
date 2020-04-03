@@ -1,8 +1,0 @@
-{
-    "parent": "block/farmland",
-    "textures": {
-        "particle": "thaumcraft:blocks/paving_stone_travel",
-        "dirt": "thaumcraft:blocks/arcane_brick_stone",
-        "top": "thaumcraft:blocks/paving_stone_travel"
-    }
-}

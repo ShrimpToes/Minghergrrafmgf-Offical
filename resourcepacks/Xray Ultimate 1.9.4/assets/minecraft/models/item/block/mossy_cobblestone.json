@@ -1,6 +1,0 @@
-{
-    "parent": "item/block/cube_all",
-    "textures": {
-        "all": "blocks/cobblestone_mossy"
-    }
-}
