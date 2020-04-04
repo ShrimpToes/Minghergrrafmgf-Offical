@@ -10,6 +10,7 @@ logs/*
 memory_repo/*
 saves/*
 resources/*
+resourcepacks/*
 texturepacks/*
 shaderpacks/*
 ## configs
