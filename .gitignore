@@ -24,3 +24,6 @@ crafttweaker.log
 ##random stuff
 usercache.json
 usernamecache.json
+
+#too big
+releases/*
