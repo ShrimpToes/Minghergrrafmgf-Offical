@@ -1,8 +1,8 @@
 Put all your extra stuff in .gitignore and make sure its all in the right folder and you should be good to go
 
-For those of you who aren't github masters, or simply want an easier way of downloading the pack, simply follow the guide below.
+**For those of you who aren't github masters, or want an easier way of downloading the pack, simply follow the guide below.**
 
-NOTE: this assumes you've already downloaded and installed 1.12.2 forge version 14.23.5.2847
+NOTE: this assumes you've already downloaded and installed 1.12.2 forge version 14.23.5.2847 from http://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.12.2.html
 
 STEP 1: Download the pack
   
@@ -23,7 +23,7 @@ STEP 3: Create a new minecraft installation
 - Under version scroll to the bottom, click on release 1.12.2-forge1.12.2-14.23.5.2847. 
 - Under game directory click "Browse" navigate to AppData\roaming\.minecraft\MingherafRelease-master, click "ok".
 - click more options and under where it says JVM Arguments, replace what's there with the following: 
-	"-XX:+UseG1GC -Xmx4G -Xms4G -Dsun.rmi.dgc.server.gcInterval=2147483646 -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M"
+	"-XX:+UseG1GC -Xmx4G -Xms4G -Dsun.rmi.dgc.server.gcInterval=2147483646 -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M".
 - Finally, click create.
 
 
