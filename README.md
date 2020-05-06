@@ -24,6 +24,7 @@ STEP 3: Create a new minecraft installation
 - Under game directory click "Browse" navigate to AppData\roaming\.minecraft\MingherafRelease-master, click "ok".
 - click more options and under where it says JVM Arguments, replace what's there with the following: 
 	"-XX:+UseG1GC -Xmx4G -Xms4G -Dsun.rmi.dgc.server.gcInterval=2147483646 -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:G1HeapRegionSize=32M".
+NOTE: this is purely to allocate more memory to minecraft so it can acctually launch with the pack. If you want to use more or less you can change the numbers in -Xmx4G & -Xms4G
 - Finally, click create.
 
 
